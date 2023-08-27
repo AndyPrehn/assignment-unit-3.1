@@ -8,9 +8,10 @@ let animalArray = ['fish', 'cat', 'bird', 'dog'];
 console.log('Animals are: ', animalArray);
 
 // 1. TODO: Make an array `favoriteFoods` with some favorite foods
-//    Console log your array of foods to the console with a message, 
+//    Console log your array of foods to the console with a message,
 //    similar to the example above
-
+let favoriteFoods = ['lobster', 'pizzza', 'brussels sprouts', 'seafood', 'jelly babies'];
+console.log('Favs are: ', favoriteFoods);
 
 // Array.length - tells you how many items are in the array
 console.log('--- 2. Length of an array ---');
@@ -21,6 +22,8 @@ console.log('Number of animals:', numberOfAnimals);
 
 // 2. TODO: Create a variable `numberOfFoods`
 //    Console log to the console the number of foods
+let numberOfFoods = favoriteFoods.length
+console.log('Number of foods: ', numberOfFoods);
 
 
 // Accessing array items
@@ -31,16 +34,20 @@ let firstAnimal = animalArray[0];
 console.log('First animal is', firstAnimal);
 
 // 3.a. TODO: Create a variable `secondAnimal`
-//      Console log the second animal in the array 
-
+//      Console log the second animal in the array
+let secondAnimal = animalArray[1];
+console.log('Second animal is:', secondAnimal);
 
 // 3.b. TODO: Create a variable `lastAnimal`
-//      Console log the last animal in the array using it's array index 
+//      Console log the last animal in the array using it's array index
+let lastAnimal = animalArray [3]
+console.log('Last animal is:', lastAnimal);
 
 
-// 3.c. (STRETCH) TODO: Update 3.b to use the array length, 
+// 3.c. (STRETCH) TODO: Update 3.b to use the array length,
 //      instead of the exact index number of the last item.
-
+lastAnimal = animalArray [animalArray.length - 1]
+console.log('Last animal is:', lastAnimal);
 
 
 // Adding & Removing Array Items
@@ -53,7 +60,9 @@ console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Create a variable `dessert` and assign it to a new food.
 //      Add the `dessert` at the end of your array & log the array
-
+let dessert = 'keyLimePie';
+favoriteFoods.push(dessert);
+console.log('Add a dessert to the end', favoriteFoods);
 
 // Example: Add an animal to the beginning using Array.unshift
 let animalToUnshift = 'walrus';
@@ -62,7 +71,9 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.b. TODO: Create a variable `entree` and assign it to a new food.
 //      Add the `entree` at the beginning of the array & log the array
-
+let entree = 'mushroomStroganoff';
+favoriteFoods.unshift(entree);
+console.log('Entree added to beginning: ${favoriteFoods}');
 
 // Example: Remove the last animal by using Array.pop
 let removedAnimal = animalArray.pop();
@@ -72,20 +83,25 @@ console.log('The animals are now', animalArray);
 // NOTE: Use the `colors` array for 4.c and 4.d.
 let colors = ['orange', 'yellow', 'green', 'teal'];
 
-// 4.c. TODO: Create a variable `lastColor`. Remove the color 
+// 4.c. TODO: Create a variable `lastColor`. Remove the color
 //      at the end of your array & assign it to `lastColor`.
 //      Console log both the color removed and the updated array.
-
+let lastColor = 'teal';
+let removeColor = colors.pop();
+console.log('Removed last color', removeColor);
 
 // Example: Remove the first color using Array.shift
 removedAnimal = animalArray.shift();
 console.log('Removed the first animal', removedAnimal);
 console.log('The animals are now', animalArray);
 
-// 4.d. TODO: Create a variable `firstColor`. Remove the color 
+// 4.d. TODO: Create a variable `firstColor`. Remove the color
 //      at the beginning of your array & assign it to `firstColor`.
 //      Console log both the color removed and the updated array.
-
+let firstColor = 'orange';
+removeColor = colors.shift();
+console.log('Remove the first color', removeColor);
+console.log('The colors are now', colors);
 
 // STRETCH GOALS:
 
@@ -106,7 +122,7 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 //     Console log the string.
 
 
-// 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines 
+// 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines
 //     the gems array with the colors array.
 //     Console log the new array.
 //     It should look something like:
